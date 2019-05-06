@@ -1,5 +1,7 @@
 import os
 
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
 
 def get_list_of_files(dir_name: str) -> list:
     files_in_current_directory: list = os.listdir(dir_name)

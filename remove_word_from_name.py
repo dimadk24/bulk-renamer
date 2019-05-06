@@ -1,15 +1,12 @@
 import os
 import shutil
 
-from utils import get_list_of_files, remove_part_of_string, dir_is_empty
+from utils import get_list_of_files, remove_part_of_string, dir_is_empty, script_dir
 
 WORD = 'АРТДИЗАЙН-'
 
-script_path = os.path.dirname(os.path.abspath(__file__))
-
-
 if __name__ == '__main__':
-    filenames = get_list_of_files(script_path)
+    filenames = get_list_of_files(script_dir)
     for filename in filenames:
         if WORD in filename:
             directory = os.path.dirname(filename)
